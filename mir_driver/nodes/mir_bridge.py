@@ -160,7 +160,7 @@ def _prepend_tf_prefix_dict_filter(msg_dict):
     # filtered_msg_dict = copy.deepcopy(msg_dict)
     if not isinstance(msg_dict, dict):  # can happen during recursion
         return
-    for (key, value) in msg_dict.items():
+    for key, value in msg_dict.items():
         if key == 'header':
             try:
                 # prepend frame_id
@@ -187,7 +187,7 @@ def _remove_tf_prefix_dict_filter(msg_dict):
     # filtered_msg_dict = copy.deepcopy(msg_dict)
     if not isinstance(msg_dict, dict):  # can happen during recursion
         return
-    for (key, value) in msg_dict.items():
+    for key, value in msg_dict.items():
         if key == 'header':
             try:
                 # remove frame_id
@@ -494,12 +494,12 @@ class MiRBridge(object):
             topics.append([topic_name, topic_type, has_publishers, has_subscribers])
 
         print('Publishers:')
-        for (topic_name, topic_type, has_publishers, has_subscribers) in topics:
+        for topic_name, topic_type, has_publishers, has_subscribers in topics:
             if has_publishers:
                 print((' * %s [%s]' % (topic_name, topic_type)))
 
         print('\nSubscribers:')
-        for (topic_name, topic_type, has_publishers, has_subscribers) in topics:
+        for topic_name, topic_type, has_publishers, has_subscribers in topics:
             if has_subscribers:
                 print((' * %s [%s]' % (topic_name, topic_type)))
 
