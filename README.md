@@ -17,6 +17,7 @@ This repo has been confirmed to work with the following robots:
 
 * MiR 100
 * MiR 200
+* MiR 250
 * MiR 500
 
 It probably also works with the MiR250 and MiR1000. If you can test it on one
