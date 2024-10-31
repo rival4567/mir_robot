@@ -2,9 +2,8 @@ cmake_minimum_required(VERSION 3.5.1)
 cmake_policy(SET CMP0048 NEW)
 project(mir_description)
 
-find_package(catkin REQUIRED COMPONENTS
-  roslaunch
-)
+find_package(ament_cmake REQUIRED)
+find_package(ros2launch REQUIRED)
 
 ###################################
 ## catkin specific configuration ##
